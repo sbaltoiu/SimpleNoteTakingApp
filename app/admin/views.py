@@ -73,8 +73,7 @@ def edit_note(id):
     note = Note.query.get_or_404(id)
     form = NoteForm(obj=note)
     if form.validate_on_submit():
-#        note.userEmail = form.userEmail.data
-        note.noteText = form.noteText.data
+        note.text = form.noteText.data
         db.session.commit()
         flash('You have successfully edited the note.')
 

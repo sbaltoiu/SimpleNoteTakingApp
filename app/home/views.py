@@ -88,7 +88,7 @@ def edit_note(id):
     form = NoteForm(obj=note)
     if form.validate_on_submit():
         note.user_id = current_user.id
-        note.noteText = form.noteText.data
+        note.text = form.noteText.data
         db.session.commit()
         flash('You have successfully edited the note.')
 
