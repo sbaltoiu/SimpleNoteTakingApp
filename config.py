@@ -26,3 +26,16 @@ app_config = {
     'development': DevelopmentConfig,
     'production': ProductionConfig
 }
+
+class TestingConfig(Config):
+    """
+    Testing configurations
+    """
+
+    TESTING = True
+
+app_config = {
+    'development': DevelopmentConfig,
+    'production': ProductionConfig,
+    'testing': TestingConfig
+}
